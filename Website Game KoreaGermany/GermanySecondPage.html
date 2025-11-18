@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germany Menu with Video Background</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Georgia", serif;
+            height: 100vh;
+            overflow: hidden; /* prevents scrollbars */
+        }
+
+        /* ----- FULLSCREEN VIDEO ----- */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;       /* zooms to fill screen */
+            z-index: -1;             /* behind everything */
+        }
+
+        /* ----- CONTAINER FOR BOXES ----- */
+        .menu {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 250px);
+            gap: 25px;
+            width: fit-content;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        /* ----- BOX STYLE ----- */
+        .box {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(3px);
+            background: rgba(0,0,0,0.35);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.07);
+            background: rgba(0,0,0,0.55);
+        }
+
+        /* COLORS (same as your picture) */
+        .geo { background-color: rgba(180, 40, 40, 0.55); }
+        .his { background-color: rgba(150, 70, 160, 0.55); }
+        .cul { background-color: rgba(40, 60, 150, 0.55); }
+        .food { background-color: rgba(60, 140, 110, 0.55); }
+        .lang { background-color: rgba(60, 120, 60, 0.55); }
+        .phr { background-color: rgba(170, 150, 70, 0.55); }
+        .fest { background-color: rgba(150, 100, 50, 0.55); }
+        .surv { background-color: rgba(140, 70, 140, 0.55); }
+
+        /* Back button */
+        .back {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            background: rgba(0,0,0,0.4);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background video -->
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="file:///C:/Users/daria/OneDrive/Dokumente/Website%20Game%20KoreaGermany/7975-206030307_small.mp4" type="video/mp4">
+    </video>
+
+    <!-- Boxes -->
+    <div class="menu">
+        <a href="#" class="box geo">Geography</a>
+        <a href="#" class="box his">History</a>
+
+        <a href="#" class="box cul">Culture</a>
+        <a href="#" class="box food">Food</a>
+
+        <a href="#" class="box lang">Language</a>
+        <a href="#" class="box phr">Basic Phrases</a>
+
+        <a href="#" class="box fest">Festivals & Holidays</a>
+        <a href="#" class="box surv">Survival Guide</a>
+    </div>
+
+    <a href="index.html" class="back">← Back</a>
+
+</body>
+</html>
