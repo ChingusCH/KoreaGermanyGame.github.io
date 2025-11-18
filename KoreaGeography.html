@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Georgia", serif;
+            background-image: url("file:///C:/Users/daria/OneDrive/Dokumente/Website%20Game%20KoreaGermany/JapanPhotoForIQ.jpg.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 250px);
+            gap: 25px;
+        }
+
+        .box {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.25);
+            backdrop-filter: blur(2px);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.07);
+            background: rgba(0,0,0,0.4);
+        }
+
+        /* NEW random colors */
+        .geo { background-color: rgba(60, 120, 190, 0.75); }      /* soft blue */
+        .quiz1 { background-color: rgba(200, 80, 120, 0.75); }    /* rose red */
+        .sights { background-color: rgba(80, 160, 120, 0.75); }   /* jade green */
+        .quiz2 { background-color: rgba(180, 130, 60, 0.75); }    /* warm gold */
+        .cities { background-color: rgba(140, 90, 180, 0.75); }   /* violet */
+        .quiz3 { background-color: rgba(220, 110, 70, 0.75); }    /* orange-red */
+
+        /* Back button */
+        .back {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            background: rgba(0,0,0,0.4);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+
+        <!-- Row 1 -->
+        <a href="#" class="box geo">Geography</a>
+        <a href="#" class="box quiz1">Quiz</a>
+
+        <!-- Row 2 -->
+        <a href="#" class="box sights">Sightseeings</a>
+        <a href="#" class="box quiz2">Quiz</a>
+
+        <!-- Row 3 -->
+        <a href="#" class="box cities">Big Cities</a>
+        <a href="#" class="box quiz3">Quiz</a>
+
+    </div>
+
+    <a href="KoreaSecondPage.html" class="back">← Back</a>
+
+</body>
+</html>
+
